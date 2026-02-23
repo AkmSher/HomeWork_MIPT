@@ -1,0 +1,14 @@
+# Сборка программы
+make
+
+# Вывод справки
+./temperature_stats -h
+
+# Анализ всего файла
+./temperature_stats -f temperature.csv
+
+# Анализ конкретного месяца
+./temperature_stats -f temperature.csv -m 1
+
+# Очистка
+make clean
