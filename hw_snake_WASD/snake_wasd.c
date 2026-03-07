@@ -273,7 +273,7 @@ int main()
     noecho();             // Отключаем echo() режим при вызове getch
     curs_set(FALSE);      // Отключаем курсор
     
-    mvprintw(0, 0, " Use WASD or arrows for control. Press 'Backspace' for EXIT");
+    mvprintw(0, 0, " Press 'Delete' for Fast. Press 'Insert' for Slow Use WASD. Press 'Backspace' for EXIT");
     timeout(0);           // Отключаем таймаут после нажатия клавиши в цикле
     
     int key_pressed = 0;
@@ -308,8 +308,7 @@ int main()
         drawFood(food);
         
         // Вывод счета
-        mvprintw(2, 0, "Score: %d | Tail size: %zu", score, snake->tsize);
-        mvprintw(1, 0, "Press 'Delete' for Fast. Press 'Insert' for Slow");
+        mvprintw(1, 0, "Score: %d | Tail size: %zu", score, snake->tsize);
         refresh();
         
         // Проверка столкновения с самим собой
